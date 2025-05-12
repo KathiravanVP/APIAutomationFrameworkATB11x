@@ -1,4 +1,4 @@
-package com.kathiravanvp.sample;
+package com.kathiravanvp.tests.sample;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
