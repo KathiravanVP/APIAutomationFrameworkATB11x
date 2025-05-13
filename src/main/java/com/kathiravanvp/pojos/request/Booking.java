@@ -15,7 +15,7 @@ public class Booking {
     private String lastname;
     @SerializedName("totalprice")
     @Expose
-    private String totalprice;
+    private Integer totalprice;
     @SerializedName("depositpaid")
     @Expose
     private Boolean depositpaid;
@@ -42,11 +42,11 @@ public class Booking {
         this.lastname = lastname;
     }
 
-    public String getTotalprice() {
+    public Integer getTotalprice() {
         return totalprice;
     }
 
-    public void setTotalprice(String totalprice) {
+    public void setTotalprice(Integer totalprice) {
         this.totalprice = totalprice;
     }
 
