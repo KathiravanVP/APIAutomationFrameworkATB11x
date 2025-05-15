@@ -91,4 +91,12 @@ public class PayloadManager {
         booking.setAdditionalneeds("Lunch");
         return gson.toJson(booking);
     }
+
+    public String partialUpdatePayloadAsString() {
+        Booking booking = new Booking();
+        booking.setFirstname("Ravi");
+        booking.setLastname("Ashwin");
+
+        return gson.toJson(booking);
+    }
 }
