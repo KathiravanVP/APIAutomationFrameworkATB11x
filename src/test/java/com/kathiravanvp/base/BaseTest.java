@@ -3,6 +3,7 @@ package com.kathiravanvp.base;
 import com.kathiravanvp.asserts.AssertActions;
 import com.kathiravanvp.endpoints.APIConstants;
 import com.kathiravanvp.modules.PayloadManager;
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -29,6 +30,19 @@ public class BaseTest {
                 .setBaseUri(APIConstants.BASE_URL)
                 .addHeader("Content-Type", "application/json")
                 .build().log().all();
+    }
+
+    public String getToken(){
+        requestSpecification.basePath(APIConstants.AUTH_URL);
+        response = RestAssured.given(requestSpecification)
+                .when().body(payloadManager.setAuthPayload())
+                .log().all().post();
+        System.out.println(response.asString());
+
+        String token = payloadManager.getTokenFromJson(response.asString());
+
+        assertActions.verifyStringKeyNotNull(token);
+        return token;
     }
 
     @AfterTest

@@ -16,6 +16,7 @@ public class BookingResponse {
     private Booking booking;
 
     public Integer getBookingid() {
+
         return bookingid;
     }
 
@@ -24,10 +25,12 @@ public class BookingResponse {
     }
 
     public Booking getBooking() {
+
         return booking;
     }
 
     public void setBooking(Booking booking) {
+
         this.booking = booking;
     }
 
