@@ -13,6 +13,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class BaseTest {
     public RequestSpecification requestSpecification;
     public Response response;
@@ -43,6 +45,14 @@ public class BaseTest {
 
         assertActions.verifyStringKeyNotNull(token);
         return token;
+    }
+
+    public Integer getBookingID(){
+        requestSpecification.basePath(APIConstants.CREATE_UPDATE_BOOKING_URL);
+        response = RestAssured.given(requestSpecification).when().log().all().get();
+        List<Integer> bookingIDs = response.jsonPath().getList("bookingid");
+        Integer bookingid = bookingIDs.get(3);
+        return bookingid;
     }
 
     @AfterTest
