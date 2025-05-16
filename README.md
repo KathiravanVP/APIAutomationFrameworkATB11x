@@ -1,7 +1,7 @@
 
 # 🧪 API Automation Framework – RestAssured (Java, Windows Edition)
 
-**Author:** *Pramod Dutta*
+**Author:** *Kathiravan VP*
 
 This is a comprehensive **API Test Automation Framework** using **Java + RestAssured**, built to automate testing of the [Restful Booker](https://restful-booker.herokuapp.com/) API. It supports CRUD testing, reporting with Allure, and CI/CD integration using **Jenkins**, optimized for Windows environments.
 
@@ -171,10 +171,4 @@ allure open allure-report
 
 ---
 
-## 📷 Sample Screenshots
 
-> ![Framework Overview](https://github.com/PramodDutta/APIAutomationFramworkATB6x/assets/1409610/98bbc62d-7837-4bdc-900b-b214c675af6d)
-
-> ![Allure Report](https://github.com/PramodDutta/APIAutomationFramworkATB6x/assets/1409610/79ba2093-a1b7-4b36-ba16-9a6827af7afe)
-
----
